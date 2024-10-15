@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Pacifico&family=Prata&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family: Outfit;
+    background-attachment: scroll !important;
+}
+
+.glass-morp {
+    background: rgba(255, 255, 255, 0.86);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.7px);
+    -webkit-backdrop-filter: blur(6.7px);
+    border: 1px solid rgba(255, 255, 255, 1);
+}
+
+@keyframes spinGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.truncate-2-lines {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    /* Number of lines to show */
+    line-clamp: 2;
+    /* Fallback for other browsers */
+}
+
+.moving-gradient {
+    background: linear-gradient(270deg, #03ff57, #4c0bff, #a600ff, #ff008c, #ffc800, #ff6200);
+    background-size: 200% 200%;
+    animation: spinGradient 3s ease infinite;
+}
+
+.prata-regular {
+    font-family: "Prata", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.pacifico-regular {
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.orange_gradient {
+    @apply bg-gradient-to-r from-amber-500 via-orange-600 to-yellow-500 bg-clip-text text-transparent;
+}
+
+.green_gradient {
+    @apply bg-gradient-to-r from-green-400 to-green-200 bg-clip-text text-transparent;
+}
+
+.blue_gradient {
+    @apply bg-gradient-to-r from-blue-700 to-purple-700 bg-clip-text text-transparent;
+}
+
+/* 
+::-webkit-scrollbar {
+    display: none;
+} */
+
+@media (max-width:640px) {
+    a.active {
+        background-color: black;
+        color: white;
+        margin: 4px;
+        border-radius: 8px;
+    }
+}
+
+a.active hr {
+    display: block;
+
+}
