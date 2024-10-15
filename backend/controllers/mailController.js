@@ -38,13 +38,12 @@
 
 
 
-
 import nodemailer from 'nodemailer';
 
 const transporter = nodemailer.createTransport({
     host: process.env.SMTP_HOST,
     port: process.env.SMTP_PORT,
-    secure: process.env.SMTP_PORT === '465', // Use true for port 465
+    secure: process.env.SMTP_PORT === '465', // true for port 465, false for other ports
     auth: {
         user: process.env.SMTP_EMAIL,
         pass: process.env.SMTP_PASSWORD,
@@ -53,7 +52,7 @@ const transporter = nodemailer.createTransport({
     debug: true, // Enable debug output
 });
 
-// Wrapper function to handle mail sending
+// Mail sending function
 const fireMail = async (req, res) => {
     const { emailID, HTMLmsg, subject, body } = req.body;
 
@@ -62,7 +61,7 @@ const fireMail = async (req, res) => {
         await transporter.verify();
 
         const info = await transporter.sendMail({
-            from: process.env.SMTP_EMAIL, // sender address
+            from: process.env.SMTP_BRAVO_MAIL, // sender address
             to: emailID, // dynamic email receiver
             subject: subject, // dynamic subject
             text: body, // dynamic plain text body
