@@ -52,10 +52,10 @@ const List = ({ token }) => {
 
     return (
         <div>
-            <div>
+            <div className='shadow-custom rounded-xl p-3'>
                 <h1 className='text-xl text-gray-600 py-3'>All Products List</h1>
                 <div>
-                    <div className='hidden md:grid grid-cols-[1fr_3fr_1fr_1fr_1fr] items-center py-1 px-2 border bg-gray-100 text-sm'>
+                    <div className='shadow-custom rounded-md mb-3 hidden md:grid grid-cols-[1fr_3fr_1fr_1fr_1fr] items-center py-1 px-2 border bg-gray-100 text-sm'>
                         <p className='text-lg text-gray-500 font-semibold'>Image</p>
                         <p className='text-lg text-gray-500 font-semibold'>Name</p>
                         <p className='text-lg text-gray-500 font-semibold'>Category</p>
@@ -66,7 +66,7 @@ const List = ({ token }) => {
                 <div>
                     {
                         productData.length > 0 ? productData.map((item, index) => (
-                            <div key={index} className='grid grid-cols-[1fr_3fr_1fr] md:grid-cols-[1fr_3fr_1fr_1fr_1fr] items-center gap-2 py-1 px-2 border text-sm my-2'>
+                            <div key={index} className='shadow-custom rounded-md mb-3 grid grid-cols-[1fr_3fr_1fr] md:grid-cols-[1fr_3fr_1fr_1fr_1fr] items-center gap-2 py-1 px-2 border text-sm my-2'>
                                 <img className='w-12' src={item.image[0]} alt="" />
                                 <p className='capitalize'>{item.name}</p>
                                 <p className='capitalize'>{item.category}</p>

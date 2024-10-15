@@ -8,6 +8,7 @@ import Order from './pages/Order';
 import Login from './components/Login';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Home from './pages/Home';
 
 export const backendUrl = process.env.REACT_APP_BACKEND_URL;
 export const currency = "$";
@@ -27,8 +28,9 @@ const App = () => {
           <hr />
           <div className='flex w-full'>
             <Sidebar />
-            <div className='w-[70%] mx-auto ml-[max(5vw,25px)] my-8 text-gray-600 text-base'>
+            <div className='w-[76%] mx-auto ml-[max(2vw,25px)] my-8 text-gray-600 text-base'>
               <Routes>
+                <Route path='/' element={<Home token={token} />} />
                 <Route path='/add' element={<Add token={token} />} />
                 <Route path='/lists' element={<List token={token} />} />
                 <Route path='/orders' element={<Order token={token} />} />

@@ -9,7 +9,6 @@ const Order = ({ token }) => {
 
     const getAllOrder = async () => {
         try {
-            console.log(token)
             if (!token) { return null; }
 
             const response = await fetch(backendUrl + "/api/orders/allorder", {
@@ -60,11 +59,11 @@ const Order = ({ token }) => {
 
 
     return (
-        <div>
+        <div className='shadow-custom rounded-xl p-3'>
             <h1 className='text-xl text-gray-600 py-3'>Order Page</h1>
             {
                 orderData.map((item, index) => (
-                    <div key={index} className='grid grid-cols-1 sm:grid-cols-[0.5fr_2fr_1fr] lg:grid-cols-[0.5fr_2fr_1fr_1fr_1fr] gap-3 items-start border-2 border-gray-200 p-5 md:p-8 my-3 md:my-4 text-xs sm:text-sm text-gray-700'>
+                    <div key={index} className='shadow-custom rounded-xl grid grid-cols-1 sm:grid-cols-[0.5fr_2fr_1fr] lg:grid-cols-[0.5fr_2fr_1fr_1fr_1fr] gap-3 items-start border-2 border-gray-200 p-5 md:p-8 my-3 md:my-4 text-xs sm:text-sm text-gray-700'>
                         <img src={assets.parcel_icon} className='w-14' alt="" />
                         <div className=''>
                             {
@@ -100,8 +99,8 @@ const Order = ({ token }) => {
                                 <option value="Order Placed">Order Placed</option>
                                 <option value="Packing">Packing</option>
                                 <option value="Shipped">Shipped</option>
-                                <option value="Out for Dilivery">Out for Dilivery</option>
-                                <option value="Diliverd">Diliverd</option>
+                                <option value="Out for delivery">Out for Delivery</option>
+                                <option value="delivered">Delivered</option>
                             </select>
                         </div>
                     </div>

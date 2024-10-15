@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 .active {
-    background: rgb(254, 89, 89);
+    background: rgb(104, 6, 250);
     border: 1px solid rgb(252, 79, 217);
     color: white;
 }

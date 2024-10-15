@@ -29,7 +29,6 @@ const Add = ({ token }) => {
             prevSelectedSizes.includes(size) ? prevSelectedSizes.filter((selectedSize) => selectedSize !== size) : [...prevSelectedSizes, size]
         );
     };
-
     useEffect(() => {
         setFormData({ ...formData, sizes: selectedSizes })
     }, [selectedSizes])
@@ -67,7 +66,7 @@ const Add = ({ token }) => {
     }
     return (
         <div>
-            <div>
+            <div className='shadow-custom rounded-xl p-3'>
                 <h1 className='text-xl text-gray-600 py-2'>Upload Image</h1>
                 <div className='flex gap-2'>
                     <label htmlFor="image1">
@@ -163,7 +162,7 @@ const Add = ({ token }) => {
                     <input onChange={(e) => { setFormData({ ...formData, bestseller: e.target.checked }) }} type="checkbox" checked={formData.bestseller} className='w-[25px] h-[25px]' />
                     <h1 className='text-xl text-gray-600 py-2'>Add to best seller</h1>
                 </div>
-                <button onClick={handleAddProduct} className='bg-black text-white text-xl px-4 py-3'>ADD</button>
+                <button onClick={handleAddProduct} className='rounded-lg bg-black text-white text-xl px-4 py-3'>ADD</button>
             </div>
         </div>
     )
