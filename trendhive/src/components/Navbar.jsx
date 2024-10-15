@@ -20,7 +20,7 @@ const Navbar = () => {
             <div>
                 <div className='fixed top-0 left-0 right-0 z-50 flex items-center justify-between py-4 px-4 sm:px-6 md:px-8 lg:px-12 shadow-custom rounded-lg font-medium glass-morp max-w-[1200px] lg:mx-auto sm:mx-[50px] mx-[20px] mt-5 '>
                     <Link to='/'>
-                        <p className='pacifico-regular blue_gradient text-3xl'>trendHive</p>
+                        <p className='pacifico-regular blue_gradient sm:text-3xl text-xl '>trendHive</p>
                     </Link>
                     <ul className='hidden sm:flex gap-5 text-sm text-gray-700'>
                         <NavLink to='/' className='flex flex-col items-center gap-1'>

@@ -39,7 +39,7 @@ const Bestseller = () => {
                     At TrendHive, we pride ourselves on delivering exceptional quality and style in every pair of shoes. But don't just take our word for it—read what our happy customers have to say! From comfort and durability to standout designs, our community of shoe lovers shares their genuine experiences.
                 </p>
             </div>
-            <div className="bg-gray-100 p-8 rounded-lg shadow-md max-w-2xl mx-auto">
+            <div className="md:bg-gray-100 bg-white p-0 md:p-8 rounded-lg max-w-2xl mx-auto">
                 <div className="flex justify-between items-center mb-4">
                     <button onClick={prevTestimonial} className="p-2 m-2 text-white bg-blue-500 rounded-full hover:bg-blue-600 transition duration-300">
                         &#10094;
