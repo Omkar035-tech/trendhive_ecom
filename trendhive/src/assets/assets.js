@@ -231,13 +231,13 @@ export const mailBodyTemp = `<!DOCTYPE html>
                                   </tr>
                                   <tr>
                                     <td style="padding:10px; font-family: Arial, sans-serif; font-size:14px; mso-line-height-rule: exactly;line-height: 21px; color: #0C2340;text-align:left">
-                                      <p style="margin:0">Welcome to TrendHive, where style meets comfort! We’re thrilled to have you here. As a special thank you for joining our community, we’re giving you 20% off your first purchase.🎉 Whether you’re looking for the latest in casual sneakers, formal dress shoes, or sporty kicks, we’ve got something for everyone.</p>
+                                      <p style="margin:0">Welcome to TrendHive, where style meets comfort! We're thrilled to have you here. As a special thank you for joining our community, we're giving you 20% off your first purchase.🎉 Whether you're looking for the latest in casual sneakers, formal dress shoes, or sporty kicks, we've got something for everyone.</p>
                                       
                                       <p style="margin:0">Simply use the code WELCOME20 at checkout and enjoy your discount! 😀</p>
                                       
-                                      <p style="margin:0">Don’t wait—your perfect pair is just a click away!
+                                      <p style="margin:0">Don't wait—your perfect pair is just a click away!
 [Shop Now]</p>
-                                      We can’t wait to see you step into style with TrendHive!
+                                      We can't wait to see you step into style with TrendHive!
 
                                       <p>Best,
                                       </p>
@@ -253,7 +253,7 @@ export const mailBodyTemp = `<!DOCTYPE html>
                           <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin: auto;">
                             <tr>
                               <td style="border-radius: 30px; background: #F8485E;text-align:center">
-                                <a href="https://www.ibm.com/" style="border: 1px solid #F8485E; font-family: Arial,sans-serif; font-size:14px; mso-line-height-rule: exactly;line-height: 14px; text-decoration: none; padding: 10px 31px; color: #fffffe; font-weight:bold;display: block; border-radius: 30px;">
+                                <a href="https://trendhive.vercel.app/collection" style="border: 1px solid #F8485E; font-family: Arial,sans-serif; font-size:14px; mso-line-height-rule: exactly;line-height: 14px; text-decoration: none; padding: 10px 31px; color: #fffffe; font-weight:bold;display: block; border-radius: 30px;">
                                 <strong>Visit Now</strong>
                                 </a>
                               </td>
@@ -267,7 +267,7 @@ export const mailBodyTemp = `<!DOCTYPE html>
                                 <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
                                   <tr>
                                     <td style="padding:10px; font-family: Arial, sans-serif; font-size:14px; mso-line-height-rule: exactly;line-height: 21px; color: #0C2340;text-align:left">
-                                      <p style="margin:0">P.S. This offer is only valid for a limited time, so don’t miss out! 🏃
+                                      <p style="margin:0">P.S. This offer is only valid for a limited time, so don't miss out! 🏃
                                       </p>
                                       <p>This keeps the tone friendly, exciting, and action-oriented.</p>
                                     </td>
