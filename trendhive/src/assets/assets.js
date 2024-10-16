@@ -1,4 +1,3 @@
-import logo from './logo.png'
 import hero_img from './hero_img.png'
 import cart_icon from './cart_icon.png'
 import bin_icon from './bin_icon.png'
@@ -38,10 +37,11 @@ import mainIMG from './mainIMG.png'
 import contactUS from './contactUS.webp'
 import aboutus2 from './aboutus2.png'
 import newCont from './conteactUSNew.jpg'
+import facebook from './facebook.png'
+import google from './google.png'
 
 
 export const assets = {
-  logo,
   hero_img,
   cart_icon,
   dropdown_icon,
@@ -66,7 +66,7 @@ export const assets = {
   shoeHead4,
   mainShoe,
   gredBack,
-  nike, addidas, jorden, newbal, vans, fstar, hstar, arrow, user1, user2, user3, mainIMG, contactUS, aboutus2, newCont
+  nike, addidas, jorden, newbal, vans, fstar, hstar, arrow, user1, user2, user3, mainIMG, contactUS, aboutus2, newCont, facebook, google
 }
 
 export const testimonials = [
