@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { Line, Doughnut } from "react-chartjs-2";
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, ArcElement } from "chart.js";
 import 'tailwindcss/tailwind.css';
-import assets from '../assets/assets'
 import { toast } from 'react-toastify'
 import { backendUrl, currency } from '../App'
 

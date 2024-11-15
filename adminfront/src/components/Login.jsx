@@ -1,8 +1,8 @@
 import React from 'react'
 import { useState } from 'react'
 import { backendUrl } from '../App'
-import assets from '../assets/assets'
 import { toast } from 'react-toastify'
+import { Eye, EyeOff, LogIn } from 'lucide-react'
 
 const Login = ({ setToken }) => {
     const [email, setEmail] = useState('')
@@ -45,10 +45,10 @@ const Login = ({ setToken }) => {
                         <p className='text-gray-600 text-lg pb-1.5 '>Password</p>
                         <div className='flex flex-row relative'>
                             <input className='border border-gray-400 rounded-md px-4 py-2 text-lg w-full mb-2' type={show ? "text" : "password"} name="" id="" placeholder='Enter your password' required onChange={(e) => { setPassword(e.target.value) }} />
-                            <img className='w-8 h-8 absolute right-2 top-2 cursor-pointer' src={show ? assets.eyeopen : assets.eyeclose} alt="" onClick={() => setShow(!show)} />
+                            <div className='w-8 h-8 absolute right-2 top-2 cursor-pointer' alt="" onClick={() => setShow(!show)} >{show ? (<Eye width={28} />) : (<EyeOff width={28} />)}</div>
                         </div>
                     </div>
-                    <button className='w-full bg-black text-lg px-3 py-2 rounded-lg text-white mt-3' type='submit'>Login</button>
+                    <button className='inline-flex justify-center items-center w-full bg-black text-lg px-3 py-2 rounded-lg text-white mt-3' type='submit'>Login<LogIn width={18} className='ml-2' /></button>
                 </form>
             </div>
         </div>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import assets from '../assets/assets'
 import { toast } from 'react-toastify'
 import { backendUrl, currency } from '../App'
+import { Package } from 'lucide-react'
 
 const Order = ({ token }) => {
 
@@ -64,7 +64,7 @@ const Order = ({ token }) => {
             {
                 orderData.map((item, index) => (
                     <div key={index} className='shadow-custom rounded-xl grid grid-cols-1 sm:grid-cols-[0.5fr_2fr_1fr] lg:grid-cols-[0.5fr_2fr_1fr_1fr_1fr] gap-3 items-start border-2 border-gray-200 p-5 md:p-8 my-3 md:my-4 text-xs sm:text-sm text-gray-700'>
-                        <img src={assets.parcel_icon} className='w-14' alt="" />
+                        <Package size={50} />
                         <div className=''>
                             {
                                 item.items.map((data, index) => {

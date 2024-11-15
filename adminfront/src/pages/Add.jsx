@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import assets from '../assets/assets'
 import { backendUrl } from '../App';
 import { toast } from 'react-toastify';
+import { Upload } from 'lucide-react';
 // require('dotenv').config()
 
 const Add = ({ token }) => {
@@ -70,7 +70,7 @@ const Add = ({ token }) => {
                 <h1 className='text-xl text-gray-600 py-2'>Upload Image</h1>
                 <div className='flex gap-2'>
                     <label htmlFor="image1">
-                        <img className='w-20 ' src={previewImg.image1 ? previewImg.image1 : assets.upload_area} alt="" />
+                        {previewImg.image1 ? (<img className='w-20 ' src={previewImg.image1} alt="" />) : (<div className='border border-dotted  border-cyan-950 rounded-lg'><Upload width={30} className='m-5 ' /></div>)}
                         <input
                             type="file"
                             onChange={(e) => {
@@ -81,7 +81,7 @@ const Add = ({ token }) => {
                             className='hidden' />
                     </label>
                     <label htmlFor="image2">
-                        <img className='w-20 ' src={previewImg.image2 ? previewImg.image2 : assets.upload_area} alt="" />
+                        {previewImg.image2 ? (<img className='w-20 ' src={previewImg.image2} alt="" />) : (<div className='border border-dotted  border-cyan-950 rounded-lg'><Upload width={30} className='m-5 ' /></div>)}
                         <input
                             type="file"
                             onChange={(e) => {
@@ -92,7 +92,8 @@ const Add = ({ token }) => {
                             className='hidden' />
                     </label>
                     <label htmlFor="image3">
-                        <img className='w-20 ' src={previewImg.image3 ? previewImg.image3 : assets.upload_area} alt="" />
+                        {previewImg.image3 ? (<img className='w-20 ' src={previewImg.image3} alt="" />) : (<div className='border border-dotted  border-cyan-950 rounded-lg'><Upload width={30} className='m-5 ' /></div>)}
+
                         <input
                             type="file"
                             onChange={(e) => {
@@ -103,7 +104,7 @@ const Add = ({ token }) => {
                             className='hidden' />
                     </label>
                     <label htmlFor="image4">
-                        <img className='w-20' src={previewImg.image4 ? previewImg.image4 : assets.upload_area} alt="" />
+                        {previewImg.image4 ? (<img className='w-20 ' src={previewImg.image4} alt="" />) : (<div className='border border-dotted  border-cyan-950 rounded-lg'><Upload width={30} className='m-5 ' /></div>)}
                         <input
                             type="file"
                             onChange={(e) => {
@@ -149,7 +150,7 @@ const Add = ({ token }) => {
                         {['S', 'M', 'L', 'XL', 'XXL'].map((size) => (
                             <div key={size}>
                                 <p
-                                    className={`px-3 py-2 text-xl cursor-pointer ${selectedSizes.includes(size) ? 'bg-black text-white' : 'bg-gray-200'}`}
+                                    className={`cursor-pointer px-4 py-2 border-gray-200 border shadow-smooth rounded-lg bg-gray-100  ${selectedSizes.includes(size) ? 'bg-gradient-to-r from-[#fdc527] to-[#fea01a] text-white' : 'bg-gray-200'}`}
                                     onClick={() => { toggleSizeSelection(size) }}
                                 >
                                     {size}
@@ -162,7 +163,7 @@ const Add = ({ token }) => {
                     <input onChange={(e) => { setFormData({ ...formData, bestseller: e.target.checked }) }} type="checkbox" checked={formData.bestseller} className='w-[25px] h-[25px]' />
                     <h1 className='text-xl text-gray-600 py-2'>Add to best seller</h1>
                 </div>
-                <button onClick={handleAddProduct} className='rounded-lg bg-black text-white text-xl px-4 py-3'>ADD</button>
+                <button disabled={true} onClick={handleAddProduct} className='rounded-lg bg-black text-white text-xl px-4 py-3'>ADD</button>
             </div>
         </div>
     )

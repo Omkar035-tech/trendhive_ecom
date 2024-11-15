@@ -1,5 +1,6 @@
 import React from 'react'
 import { assets } from '../assets/assets'
+import { BadgePlus } from 'lucide-react'
 
 const Policy = () => {
     return (

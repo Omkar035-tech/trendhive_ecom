@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import assets from '../assets/assets'
 import { backendUrl } from '../App'
 import { toast } from 'react-toastify'
+import { Trash } from 'lucide-react'
 
 const List = ({ token }) => {
     const [productData, setProductData] = useState([])
@@ -71,9 +71,9 @@ const List = ({ token }) => {
                                 <p className='capitalize'>{item.name}</p>
                                 <p className='capitalize'>{item.category}</p>
                                 <p>{item.price}</p>
-                                <div className='flex items-center justify-center'>
-                                    <img onClick={() => handleDeleteItem(item._id)} src={assets.bin_icon} className='w-5 cursor-pointer' alt="" />
-                                </div>
+                                <button className='flex items-center justify-center' disabled={true}>
+                                    <Trash size={18} />
+                                </button>
                             </div>
                         )) : ""
                     }
