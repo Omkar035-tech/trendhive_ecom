@@ -5,8 +5,8 @@ import { toast } from 'react-toastify'
 import { Eye, EyeOff, LogIn } from 'lucide-react'
 
 const Login = ({ setToken }) => {
-    const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('')
+    const [email, setEmail] = useState('trendhive@admin.com')
+    const [password, setPassword] = useState('12345678')
     const [show, setShow] = useState(false);
 
     const handleSubmit = async (e) => {
@@ -39,12 +39,12 @@ const Login = ({ setToken }) => {
                 <form onSubmit={handleSubmit}>
                     <div>
                         <p className='text-gray-600 text-lg pb-1.5 '>Email Address</p>
-                        <input className='border border-gray-400 rounded-md px-4 py-2 text-lg w-full mb-2' type="email" name="" id="" placeholder='Enter your Email' required onChange={(e) => { setEmail(e.target.value) }} />
+                        <input className='border border-gray-400 rounded-md px-4 py-2 text-lg w-full mb-2' value={email ? email : 'trendhive@admin.com'} type="email" name="" id="" placeholder='Enter your Email' required onChange={(e) => { setEmail(e.target.value) }} />
                     </div>
                     <div>
                         <p className='text-gray-600 text-lg pb-1.5 '>Password</p>
                         <div className='flex flex-row relative'>
-                            <input className='border border-gray-400 rounded-md px-4 py-2 text-lg w-full mb-2' type={show ? "text" : "password"} name="" id="" placeholder='Enter your password' required onChange={(e) => { setPassword(e.target.value) }} />
+                            <input className='border border-gray-400 rounded-md px-4 py-2 text-lg w-full mb-2' type={show ? "text" : "password"} name="" id="" placeholder='Enter your password' value={password ? password : '12345678'} required onChange={(e) => { setPassword(e.target.value) }} />
                             <div className='w-8 h-8 absolute right-2 top-2 cursor-pointer' alt="" onClick={() => setShow(!show)} >{show ? (<Eye width={28} />) : (<EyeOff width={28} />)}</div>
                         </div>
                     </div>

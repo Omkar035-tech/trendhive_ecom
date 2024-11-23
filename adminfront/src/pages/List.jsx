@@ -71,7 +71,7 @@ const List = ({ token }) => {
                                 <p className='capitalize'>{item.name}</p>
                                 <p className='capitalize'>{item.category}</p>
                                 <p>{item.price}</p>
-                                <button className='flex items-center justify-center' disabled={true}>
+                                <button className='flex items-center justify-center' disabled={true} onClick={() => handleDeleteItem(item._id)}>
                                     <Trash size={18} />
                                 </button>
                             </div>
